@@ -1,0 +1,11 @@
+create table funcionario(
+idFuncionario int(11) primary key auto_increment not null,
+nomeFuncionario varchar(50) not null,
+dataNascimento date,
+cep int(8) not null,
+endereco varchar(150),
+cpf int(11) not null,
+senha int(20) not null,
+usuario varchar (20),
+tipo boolean
+);
