@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS `bdcinema`.`preco` (
+  `idpreco` INT NOT NULL AUTO_INCREMENT,
+  `preco` FLOAT NOT NULL,
+  `tipoEntrada` TINYINT NOT NULL,
+  PRIMARY KEY (`idpreco`))
+ENGINE = InnoDB;
