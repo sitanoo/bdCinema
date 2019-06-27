@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS `bdcinema`.`sessao` (
+  `idsessao` INT NOT NULL AUTO_INCREMENT,
+  `horaInicio` DATETIME NOT NULL,
+  `horaTermino` DATETIME NOT NULL,
+  `preco_idpreco` INT NOT NULL,
+  `filme_idFilmes` INT NOT NULL,
+  PRIMARY KEY (`idsessao`),
+  CONSTRAINT `fk_sessao_preco1`
+    FOREIGN KEY (`preco_idpreco`)
+    REFERENCES `bdcinema`.`preco` (`idpreco`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_sessao_filme1`
+    FOREIGN KEY (`filme_idFilmes`)
+    REFERENCES `bdcinema`.`filme` (`idFilmes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
