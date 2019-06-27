@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS `bdcinema`.`cliente_tem_sessao_assento_em_sala` (
+  `sessao_idsessao` INT NOT NULL,
+  `assento_idassento` INT NOT NULL,
+  `sala_idSala` INT NOT NULL,
+  `cliente_idCliente` INT(11) NOT NULL,
+  CONSTRAINT `fk_sessao_has_assento_sessao1`
+    FOREIGN KEY (`sessao_idsessao`)
+    REFERENCES `bdcinema`.`sessao` (`idsessao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_sessao_has_assento_assento1`
+    FOREIGN KEY (`assento_idassento`)
+    REFERENCES `bdcinema`.`assento` (`idassento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_sessao_has_assento_sala1`
+    FOREIGN KEY (`sala_idSala`)
+    REFERENCES `bdcinema`.`sala` (`idSala`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_sessao_has_assento_cliente1`
+    FOREIGN KEY (`cliente_idCliente`)
+    REFERENCES `bdcinema`.`cliente` (`idCliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
