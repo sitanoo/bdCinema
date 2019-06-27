@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `bdcinema`.`filme` (
+  `idFilmes` INT NOT NULL AUTO_INCREMENT,
+  `nomeFilmes` VARCHAR(55) NOT NULL,
+  `dataDeLancamento` DATE NOT NULL,
+  `3D` TINYINT NOT NULL,
+  PRIMARY KEY (`idFilmes`))
+ENGINE = InnoDB;
